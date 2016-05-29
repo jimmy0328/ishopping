@@ -1,0 +1,32 @@
+<%= form_for [:admin, @product], html: {multipart:  true} do |f| %>
+
+  <div class="form-group">
+    <%= f.text_field :title, class: 'form-control', placeholder: '標題'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_area :description, class: 'form-control', placeholder: '描述'   %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :cost, class: 'form-control', placeholder: '成本價'   %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :price, class: 'form-control', placeholder: '售價'   %>
+  </div>
+
+  <div class="form-inline">
+    <%= f.label("照片") %>
+    <%= f.file_field :cover_image %>
+  </div>
+  <div class="form-group">
+    <%= f.label("tags") %>
+    <%= f.text_field :tag, class: 'form-control'   %>
+  </div>
+  <div class="form-inline">
+    <%= f.label("是否顯示") %>
+    <%= f.check_box :display   %>
+  </div>
+ <%= f.submit "送出", class: 'btn btn-primary'%>
+<% end %>

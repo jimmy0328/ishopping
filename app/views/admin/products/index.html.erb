@@ -1,0 +1,29 @@
+<%= link_to "New", new_admin_product_path, class: 'btn btn-primary'%>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th width="150">image</th>
+      <th width="150">產品名稱</th>
+      <th>描述</th>
+      <th>成本</th>
+      <th>售價</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product|%>
+    <tr>
+      <td><%= image_tag product.cover_image.url(:thumb)%></td>
+      <td><%= product.title %></td>
+      <td><%= product.description%></td>
+      <td><%= product.try(:cost)%></td>
+      <td><%= product.try(:price)%></td>
+      <td>
+        <%= link_to "修改", edit_admin_product_path(product.id) %>
+        <%= link_to "刪除",admin_product_path(product.id), method: :delete, data: { confirm: 'are you sure'} %>
+
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
