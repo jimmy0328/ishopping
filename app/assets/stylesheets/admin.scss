@@ -1,7 +1,8 @@
 /*
- *= require_tree .
  *= require_self
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "font-awesome";
+@import "admin/metisMenu";
+@import "admin/sb-admin-2";
