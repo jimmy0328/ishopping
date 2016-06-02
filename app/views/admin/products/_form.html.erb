@@ -22,11 +22,11 @@
   </div>
   <div class="form-group">
     <%= f.label("tags") %>
-    <%= f.text_field :tag, class: 'form-control'   %>
+    <%= f.text_field :tag, class: 'form-control', 'data-role'=>"tagsinput"  %>
   </div>
   <div class="form-inline">
     <%= f.label("是否顯示") %>
-    <%= f.check_box :display   %>
+    <%= f.check_box :display %>
   </div>
  <%= f.submit "送出", class: 'btn btn-primary'%>
 <% end %>
