@@ -3,4 +3,4 @@
 //= require bootstrap
 //= require admin/metisMenu
 //= require admin/sb-admin-2
-
+//= require bootstrap-tagsinput

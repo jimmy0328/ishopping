@@ -19,7 +19,7 @@ class Admin::ProductsController < Admin::AdminController
   end
 
   def create
-    if Product.create(product_params)
+    if Product.create!(product_params)
       redirect_to admin_products_path, :flash=>{ :notice => '新增成功'}
     else
       render :new, :flash=>{ :notice => '新增失敗'}
