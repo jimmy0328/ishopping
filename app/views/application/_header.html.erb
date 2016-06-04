@@ -29,6 +29,15 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
+        <li class='shopping-cart hidden-xs'>
+          <%= link_to carts_path do %>
+            購物車
+           <i class="fa fa-shopping-cart"></i>
+            <span class="badge gold">
+              <%= current_cart.cart_items.count %>
+           </span>
+          <% end %>
+        </li>
       <% if !current_user %>
         <li> <%= link_to("登入", new_user_session_path) %></li>
       <% else%>

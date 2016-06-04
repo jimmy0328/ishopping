@@ -8,7 +8,8 @@
           <h3><%= p.title%></h3>
           <p><%= p.description%></p>
           <p>
-          <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+         <%= link_to("加入購物車", add_to_cart_product_path(p), method: :post, class: "btn btn-primary") %>
+          <a href="#" class="btn btn-default">More Info</a>
           </p>
       </div>
       </div>
