@@ -3,7 +3,13 @@ class ProductsController < ApplicationController
   before_action :set_product
 
 
-  def show; end
+  def index
+    @products = Product.all
+  end
+
+  def show
+    @product.increment!(:score)
+  end
 
   def add_to_cart
    current_cart.add(@product)
