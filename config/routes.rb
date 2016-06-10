@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       end
   end
 
+  root 'home#index'
   devise_for :users
 
   namespace :admin do
@@ -14,13 +15,16 @@ Rails.application.routes.draw do
     resources :products
   end
 
-
   resources :products, param: :permalink do
     member do
       post :add_to_cart
     end
   end
-  resources :carts
-  root 'home#index'
+
+  resources :carts do
+    collection do
+      post :checkout
+    end
+  end
 
 end
