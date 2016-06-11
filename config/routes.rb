@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    root "home#index"
+    root "home#index", as: 'root'
     resources :products
   end
 
@@ -26,5 +26,7 @@ Rails.application.routes.draw do
       post :checkout
     end
   end
+
+  resources :orders
 
 end

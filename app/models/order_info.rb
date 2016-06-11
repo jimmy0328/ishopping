@@ -1,3 +1,3 @@
 class OrderInfo < ApplicationRecord
-  belongs_to :order, inverse_of: :order_info
+  belongs_to :order
 end
