@@ -36,6 +36,7 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'bootstrap-tagsinput-rails'
 gem "font-awesome-rails"
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
