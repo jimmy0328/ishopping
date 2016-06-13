@@ -40,18 +40,24 @@
         <%= f.simple_fields_for :info do |c| %>
 
           <legend> 訂購人</legend>
-          <div class="form-group col-lg-6">
+          <div class="form-group col-lg-4">
             <%= c.input :billing_name  %>
           </div>
-          <div class="form-group col-lg-6">
+          <div class="form-group col-lg-4">
+            <%= c.input :billing_tel  %>
+          </div>
+          <div class="form-group col-lg-4">
             <%= c.input :billing_address  %>
           </div>
 
           <legend> 收貨人</legend>
-          <div class="form-group col-lg-6">
+          <div class="form-group col-lg-4">
            <%= c.input :shipping_name  %>
           </div>
-          <div class="form-group col-lg-6">
+          <div class="form-group col-lg-4">
+           <%= c.input :shipping_tel  %>
+          </div>
+          <div class="form-group col-lg-4">
             <%= c.input :shipping_address  %>
           </div>
         <% end %>
