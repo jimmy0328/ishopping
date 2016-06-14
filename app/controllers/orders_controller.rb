@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @orders =  Order.where(user_id: current_user.id)
+  end
+
   def create
     @order =  current_user.orders.build
     if @order.save
@@ -10,7 +14,8 @@ class OrdersController < ApplicationController
       @order.update(set_params)
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
-      redirect_to order_path(@order)
+      current_cart.delete
+      redirect_to orders_path
     else
       render "carts/checkout"
     end

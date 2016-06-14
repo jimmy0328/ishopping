@@ -1,0 +1,19 @@
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tr class="success">
+      <td> Order ID </td>
+      <td> Total Price </td>
+      <td> Order DateTime </td>
+      <td>  </td>
+    </tr>
+    <% @orders.each do  |order| %>
+    <tr>
+      <td> <%= order.id %> </td>
+      <td> <%= order.total %></td>
+      <td> <%= order.created_at%></td>
+      <td> <%= link_to "Detail", "" %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
