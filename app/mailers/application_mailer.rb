@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: Rails.application.secrets.action_mailer[:default][:from]
   layout 'mailer'
+  include Roadie::Rails::Automatic
 end

@@ -37,6 +37,10 @@ gem "font-awesome-rails"
 gem 'bootstrap-tagsinput-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'has_secure_token'
+
+#email
+gem 'roadie-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

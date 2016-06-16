@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
       current_cart.delete
+      OrderMailMailer.notify(@order).deliver_now!
       redirect_to orders_path
     else
       render "carts/checkout"
