@@ -21,3 +21,4 @@
 .byebug_history
 public/uploads
 config/email.yml
+config/secrets.yml
