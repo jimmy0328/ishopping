@@ -51,5 +51,5 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = config_for(:email).symbolize_keys
-
+  config.react.variant = :development
 end
