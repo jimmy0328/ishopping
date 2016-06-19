@@ -29,5 +29,6 @@ Rails.application.routes.draw do
   end
 
   resources :orders
+  resources :items, only: [:destroy], controller: "cart_items"
 
 end
