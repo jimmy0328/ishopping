@@ -20,7 +20,9 @@ window.Cart.Index = class Index extends React.Component{
            {this.props.cart.items.map( (product) => {
              return <tr>
                 <td>
-                  <img className="thumbnail" src={product.cover_image.cover.url} />
+                  <a href={`/products/${product.permalink}`} >
+                    <img className="thumbnail" src={product.cover_image.cover.url} />
+                  </a>
                 </td>
                 <td>
                   <a href={`/products/${product.permalink}`} >{product.title} </a>
