@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-   current_cart.add(@product)
+   current_cart.add(@product) unless current_cart.items.include?(@product)
    redirect_to :back
   end
 
