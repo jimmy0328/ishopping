@@ -13,8 +13,8 @@ class Cart < ApplicationRecord
     ci.save
   end
 
-  def price
-    items.map(&:price).sum
+  def total_price
+    cart_items.map(&:total).sum
   end
 
 end
