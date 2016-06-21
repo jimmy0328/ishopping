@@ -19,7 +19,7 @@ class Order < ApplicationRecord
   end
 
   def calculate_total!(cart)
-    self.total = cart.price
+    self.total = cart.total_price
     self.save
   end
 end

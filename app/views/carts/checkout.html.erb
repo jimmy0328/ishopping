@@ -5,17 +5,25 @@
       <thead>
         <tr>
           <th width="80%">商品明細</th>
+          <th>數量</th>
           <th>單價</th>
+          <th>小計</th>
         </tr>
       </thead>
       <tbody>
-        <% current_cart.items.each do |product| %>
+        <% current_cart.cart_items.each do |item| %>
           <tr>
             <td>
-              <%= link_to(product.title, product_path(product)) %>
+              <%= link_to(item.product.title, product_path(item.product)) %>
             </td>
             <td>
-              <%= product.price %>
+              <%= item.quantity %>
+            </td>
+            <td>
+              <%= item.price %>
+            </td>
+            <td>
+              <%= item.total %>
             </td>
           </tr>
         <% end %>
@@ -25,7 +33,7 @@
 
     <div class="total clearfix">
       <span class="pull-right">
-        總計 <%= current_cart.price %> NTD
+        總計 <%= current_cart.total_price %> NTD
       </span>
     </div>
 

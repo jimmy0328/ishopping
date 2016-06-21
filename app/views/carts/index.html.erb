@@ -2,17 +2,8 @@
   <div class="col-md-12">
 
     <h2> 購物車 </h2>
-
-    <%= react_component("Cart.Index", {cart: current_cart.as_json(include: :items)})%>
-
+    <%= react_component("Cart.Index", {cart: current_cart.as_json(include: {cart_items: {include: :product}})})%>
     <br>
-
-    <div class="total clearfix">
-      <span class="pull-right">
-        <span> 總計 <%= current_cart.price %> NTD  </span>
-      </span>
-    </div>
-
     <hr>
     <div class="checkout clearfix">
       <%= link_to("清除購物車", clean_carts_path, method: :delete, class: "btn btn-lg btn-default pull-right", data: { confirm: "你確定要清空整個購物車嗎？"} )%>
