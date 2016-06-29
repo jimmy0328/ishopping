@@ -38,6 +38,8 @@ gem 'bootstrap-tagsinput-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'has_secure_token'
+gem 'sidekiq'
+gem 'sinatra', github: 'sinatra'
 
 #email
 gem 'roadie-rails'
