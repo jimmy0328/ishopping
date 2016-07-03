@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "home#index", as: 'root'
     resources :products
+    resources :orders, only: [:index]
   end
 
   resources :products, param: :permalink do
