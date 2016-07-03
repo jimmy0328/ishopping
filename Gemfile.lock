@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: 92db78516c1c8f0efd82af0bef635cfca846cab3
+  branch: master
+  specs:
+    kaminari (1.0.0.alpha)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
+GIT
   remote: git://github.com/sinatra/sinatra.git
   revision: 5fcb1e1bd49c6b296927c2a25d8e47031c323008
   specs:
@@ -271,6 +280,7 @@ DEPENDENCIES
   has_secure_token
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari!
   listen (~> 3.0.5)
   mini_magick
   puma (~> 3.0)
