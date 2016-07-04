@@ -84,7 +84,9 @@
         <% end %>
       </li>
       <li>
-      <a href="#"><i class="fa fa-dashboard fa-fw"></i> User</a>
+        <%= link_to admin_users_path do %>
+          <i class="fa fa-dashboard fa-fw"></i> User
+        <% end %>
       </li>
       <li>
       <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Report<span class="fa arrow"></span></a>
