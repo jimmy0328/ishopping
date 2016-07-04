@@ -1,0 +1,24 @@
+<div class="table-responsive">
+<table class="table table-bordered">
+  <thead>
+    <tr class="success">
+      <th>產品名稱</th>
+      <th>建立時間</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user|%>
+    <tr>
+      <td><%= user.try(:email) %></td>
+      <td><%= user.try(:created_at)%></td>
+      <td>
+        <%= link_to "明細", "" %>
+        <%= link_to "修改", "" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+<%= paginate @users %>

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     root "home#index", as: 'root'
     resources :products
     resources :orders, only: [:index]
+    resources :users, only: [:index, :show, :update, :edit]
   end
 
   resources :products, param: :permalink do
